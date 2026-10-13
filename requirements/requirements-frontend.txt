@@ -1,0 +1,6 @@
+# Frontend VM
+streamlit
+pandas
+numpy
+requests
+altair
