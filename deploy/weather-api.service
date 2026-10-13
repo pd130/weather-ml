@@ -1,0 +1,14 @@
+[Unit]
+Description=Weather ML API
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/app
+ExecStart=/home/ubuntu/app/venv/bin/uvicorn api:app --host <BACKEND_PRIVATE_IP> --port 8000
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
