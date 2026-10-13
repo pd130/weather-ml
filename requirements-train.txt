@@ -1,8 +1,0 @@
-# Training only (Colab / laptop), never on the servers
-scikit-learn
-pandas
-numpy
-joblib
-openmeteo-requests
-requests-cache
-retry-requests
