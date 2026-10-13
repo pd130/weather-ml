@@ -1,0 +1,15 @@
+[Unit]
+Description=Weather Streamlit UI
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/app
+Environment=API_URL=http://<BACKEND_PRIVATE_IP>:8000
+ExecStart=/home/ubuntu/app/venv/bin/streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
